@@ -1,0 +1,19 @@
+title:            Elixir Buildpack for Cloud Foundry
+locale:           en_US                                                         
+url:                                                                            
+email: robertgogolok@yahoo.de
+github_username: "gogolok"
+github_source: "gogolok/cloudfoundry-buildpack-elixir-website"
+                                                                                
+                                                                                
+# Jekyll configuration                                                          
+                                                                                
+permalink:         /:year/:month/:title/                                        
+markdown:          kramdown                                                     
+                                                                                
+kramdown:                                                                       
+  auto_ids: true                                                                
+  footnote_nr: 1                                                                
+  entity_output: as_char                                                        
+  toc_levels: 1..6                                                              
+  use_coderay: false
