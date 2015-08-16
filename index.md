@@ -17,7 +17,7 @@ layout: default
 
 # Usage
 
-## Push/Deploy a Cloud Foundry application with this buildpack
+## Deployment
 
 ```
 cf push APPNAME -b https://github.com/gogolok/cloudfoundry-buildpack-elixir
@@ -27,18 +27,21 @@ cf push APPNAME -b https://github.com/gogolok/cloudfoundry-buildpack-elixir
 
 Specify **mix phoenix.server** as the *command* to run using the cf cli or the manifest.yml file.
 
-```
+{% highlight yaml %}
 ---
 application:
 - name: my-app
   ...
   command: mix phoenix.server
-
-```
+{% endhighlight %}
 
 ```
 cf push APPNAME -b https://github.com/gogolok/cloudfoundry-buildpack-elixir -c "mix phoenix.server"
 ```
+
+## Demo
+
+![gif]({{ "/assets/img/pcf-run.gif" | prepend: site.baseurl}})
 
 # Public Cloud Foundry Providers
 
@@ -61,18 +64,16 @@ Create a `elixir_buildpack.config` file in your app's root dir. The file's synta
 If you don't specify a config option, then the default option from the buildpack's [`elixir_buildpack.config`](https://github.com/gogolok/cloudfoundry-buildpack-elixir/blob/master/elixir_buildpack.config) file will be used.
 
 
-__Here's a full config file with all available options:__
+Here's a full config file with all available options:
 
-```
+{% highlight text %}
 # Erlang version
 erlang_version=17.5
-
 # Elixir version
 elixir_version=1.0.5
-
 # Always rebuild from scratch on every deploy?
 always_rebuild=false
-```
+{% endhighlight %}
 
 
 ## Specifying Elixir version
