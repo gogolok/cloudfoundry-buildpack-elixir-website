@@ -1,6 +1,7 @@
 title:            Elixir Buildpack for Cloud Foundry
 locale:           en_US                                                         
 url: gogolok.github.io/cloudfoundry-buildpack-elixir-website                                                                            
+baseurl: /cloudfoundry-buildpack-elixir-website
 email: robertgogolok@yahoo.de
 github_username: "gogolok"
 github_source: "gogolok/cloudfoundry-buildpack-elixir-website"
