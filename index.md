@@ -20,14 +20,31 @@ layout: default
 ## Push/Deploy a Cloud Foundry application with this buildpack
 
 ```
-cf push APPNAME -b "https://github.com/gogolok/cloudfoundry-buildpack-elixir"
+cf push APPNAME -b https://github.com/gogolok/cloudfoundry-buildpack-elixir
+```
+
+## Phoenix
+
+Specify **mix phoenix.server** as the *command* to run using the cf cli or the manifest.yml file.
+
+```
+---
+application:
+- name: my-app
+  ...
+  command: mix phoenix.server
+
+```
+
+```
+cf push APPNAME -b https://github.com/gogolok/cloudfoundry-buildpack-elixir -c "mix phoenix.server"
 ```
 
 # Public Cloud Foundry Providers
 
 ## Pivotal Cloud Foundry
 
-Has to be tested.
+Works by default.
 
 ## IBM Bluemix
 
@@ -35,7 +52,7 @@ Works with the *cflinuxfs2* stack.
 
 ## Anynines
 
-Currently anynines doesn't support the *cflinuxfs2* stack, so it's not available at the moment.
+Currently anynines doesn't support the *cflinuxfs2* stack, so this buildpack won't work at the moment.
 
 # Configuration
 
