@@ -45,7 +45,7 @@ cf push APPNAME -b https://github.com/gogolok/cloudfoundry-buildpack-elixir -c "
 
 # Public Cloud Foundry Providers
 
-## Pivotal Cloud Foundry
+## Anynines
 
 Works by default.
 
@@ -53,9 +53,10 @@ Works by default.
 
 Works with the *cflinuxfs2* stack.
 
-## Anynines
+## Pivotal Cloud Foundry
 
-Currently anynines doesn't support the *cflinuxfs2* stack, so this buildpack won't work at the moment.
+Works by default.
+
 
 # Configuration
 
